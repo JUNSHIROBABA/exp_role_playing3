@@ -44,7 +44,7 @@ $(document).on('turbolinks:load', function() {
         alert('メッセージを入力して下さい');
       } else {
         $('#new_message')[0].reset();
-        $('messages').append(buildHTML(message));
+        $('.messages').append(buildHTML(message));
         scroll_to_bottom();
       }
     })
