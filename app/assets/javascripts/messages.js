@@ -14,7 +14,7 @@ $(document).on('turbolinks:load', function() {
 
   function scroll_to_bottom() {
     $('.messages').animate({
-      scrollTop: $('.messages')[0].scrollHeight
+      scrollTop: $('.messages').scrollHeight
     }, 200);
   }
 
@@ -52,7 +52,6 @@ $(document).on('turbolinks:load', function() {
       alert("メッセージ送信に失敗しました");
     })
     .always(function() {
-      $(".submit-btn").prop('disabled', false)
     });
   });
 

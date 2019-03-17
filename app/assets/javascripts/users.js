@@ -46,14 +46,13 @@ $(document).on('turbolinks:load', function() {
               user_ids: userIds },
     })
     .done(function(users) {
-      console.log(users);
       user_list.empty();
       if (users.length !== 0) {
         users.forEach(function(user) {
           appendUser(user);
         })
       } else {
-        appendMessage('一致するユーザーが見つかりません');
+        appendMessage(users);
       }
     })
     .fail(function() {
