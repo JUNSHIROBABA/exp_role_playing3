@@ -52,7 +52,7 @@ $(document).on('turbolinks:load', function() {
           appendUser(user);
         })
       } else {
-        appendMessage(users);
+        appendMessage('ユーザーが見つかりませんでした');
       }
     })
     .fail(function() {
@@ -61,11 +61,11 @@ $(document).on('turbolinks:load', function() {
   });
 
   user_list.on('click', '.chat-group-user__btn--add', function() {
-    const userName = $(this).attr('data-user-name');
-    const userId   = $(this).attr('data-user-id');
+    const userName = $('.chat-group-user__btn--add').data('user-name');
+    const userId   = $('.chat-group-user__btn--add').data('user-id');
 
     userIds.push(userId);
-    $(this).parent().remove();
+    $('.chat-group-user__btn--add').parent().remove();
     addUser(userName, userId);
   })
 
