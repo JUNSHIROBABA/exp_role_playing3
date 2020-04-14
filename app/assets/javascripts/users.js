@@ -61,12 +61,13 @@ $(document).on('turbolinks:load', function() {
   });
 
   user_list.on('click', '.chat-group-user__btn--add', function() {
-    const userName = $('.chat-group-user__btn--add').data('user-name');
-    const userId   = $('.chat-group-user__btn--add').data('user-id');
+    const userName = $(this).data('user-name');
+    const userId   = $(this).data('user-id');
 
     userIds.push(userId);
     $('.chat-group-user__btn--add').parent().remove();
     addUser(userName, userId);
+    console.log(userName, userId)
   })
 
   $('.js-add-user').on('click', '.js-remove-btn', function() {
