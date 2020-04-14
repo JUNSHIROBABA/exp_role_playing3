@@ -17,3 +17,4 @@
 .byebug_history
 public/uploads/*
 Gemfile.lock
+config/secrets.yml
